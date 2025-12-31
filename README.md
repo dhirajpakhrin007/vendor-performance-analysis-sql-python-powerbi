@@ -11,7 +11,7 @@ _Analyzing vendor efficiency and profitability to support strategic purchasing a
 - <a href="#tools--technologies">Tools and Technologies</a>
 - <a href="#project-structure">Project Structure</a>
 - <a href="#data-cleaning-preparation">Data Cleaning and Preparation</a>
-- <a href="#exploratory-data-analysis-eda">Overview</a>
+- <a href="#exploratory-data-analysis-eda">Exploratory Data Analysis</a>
 - <a href="#research-questions-key-findings">Research Questions and Key Findings</a>
 - <a href="#dashboard">Dashboard</a>
 - <a href="#how-to-run-this-project">How to Run This Project</a>
@@ -49,29 +49,25 @@ Effective inventory and sales management are critical in the retail sector. This
 ---
 <h2><a class="anchor" id="project-structure"></a>Project Structure</h2>
 
-...
 vendor-performance-analysis/
-|
-|-- README.md
-|-- .gitignore
-|-- requirements.txt
-|-- Final Report.pdf
-|
-|-- notebooks/
-|   -- exploratory_data_analysis.ipynb
-|   -- vendor_performance_analysis.ipynb
-|
-|-- scripts/
-|   -- ingestion_db.py
-|   -- get_vendor_summary.py
-|
-|-- dashboard/
-|   -- dashboard.pbix
-...
+├── README.md
+│ ├── .gitignore
+│ └── requirements.txt
+│ └── Final Report.pdf
+├── notebooks/
+│ ├── exploratory_data_analysis.ipynb
+│ ├── vendor_performance_analysis.ipynb
+├── scripts/
+│ ├── ingestion_db.py
+│ ├── get_vendor_summary.py
+├── dashboard/
+│ ├── ingestion.py # Data ingestion pipeline
 
 ---
 <h2><a class="anchor" id="data-cleaning-preparation"></a>Data Cleaning and Preparation</h2>
+
 - Removed transactions having:
+  
   - Gross Profit < 0
   - Profit Margin < 0
   - Sales Quantity = 0
@@ -96,7 +92,7 @@ vendor-performance-analysis/
 - Negative between Profit Margin and Sales Price (-0.179)
 
 ---
-<h2><a class="anchor" id="research-questions-key-findings"></a>Exploratory Data Analysis (EDA)</h2>
+<h2><a class="anchor" id="research-questions-key-findings"></a>Research Questions and Key Findings</h2>
 
 1. **Brands for Promotions**: 198 brands with low sales but high profit margins
 2. **Top Vendors**: Top 10 vendors - 65.69% of purchases - risk of over-reliance
@@ -111,6 +107,7 @@ vendor-performance-analysis/
 <h2><a class="anchor" id="dashboard"></a>Dashboard</h2>
 
 -The dashboard is designed using Microsoft Power BI which displays:
+
     - Vendor-wise sales and margins
     - Inventory Turnover
     - Bulk Purchase Savings
@@ -151,6 +148,7 @@ python scripts/get_vendor_summary.py
 - Reprice slow-moving, high-margin brands
 - Clear unsold inventory strategically
 - Improve marketing for underperforming vendors
+
 
 
 
