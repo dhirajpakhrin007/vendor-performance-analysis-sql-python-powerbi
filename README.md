@@ -51,9 +51,7 @@ Effective inventory and sales management are critical in the retail sector. This
 
 vendor-performance-analysis/
 ├── README.md
-│ ├── .gitignore
-│ └── requirements.txt
-│ └── Final Report.pdf
+├── Final Report.pdf
 ├── notebooks/
 │ ├── exploratory_data_analysis.ipynb
 │ ├── vendor_performance_analysis.ipynb
@@ -61,7 +59,9 @@ vendor-performance-analysis/
 │ ├── ingestion_db.py
 │ ├── get_vendor_summary.py
 ├── dashboard/
-│ ├── ingestion.py # Data ingestion pipeline
+│ ├── Dashboard.pbix
+├── images/
+│ ├── dashboard.png
 
 ---
 <h2><a class="anchor" id="data-cleaning-preparation"></a>Data Cleaning and Preparation</h2>
@@ -148,6 +148,7 @@ python scripts/get_vendor_summary.py
 - Reprice slow-moving, high-margin brands
 - Clear unsold inventory strategically
 - Improve marketing for underperforming vendors
+
 
 
 
